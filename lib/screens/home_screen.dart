@@ -61,9 +61,27 @@ class _HomeScreenState extends State<HomeScreen> {
                       ]),
                   height: height * 0.15,
                   margin: EdgeInsets.only(
-                      bottom: height * 0.02, top: height * 0.02),
+                      bottom: height * 0.02,
+                      top: height * 0.02,
+                      left: width * 0.02,
+                      right: width * 0.02),
                   child: Row(
-                    children: [],
+                    children: [
+                      Container(
+                        width: width * 0.3,
+                        height: height * 0.15,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(10),
+                              bottomLeft: Radius.circular(10),
+                            ),
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                  "https://assets.pokemon.com/assets/cms2/img/video-games/_tiles/strategy/go/lugia/pokemon-go-169.jpg"),
+                              fit: BoxFit.cover,
+                            )),
+                      ),
+                    ],
                   ));
             },
           ),
